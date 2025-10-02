@@ -1,3 +1,4 @@
+Import-Module -Name GPWmiFilter
 #Create The GPOs!
 Write-Output "Creating the 4 GPOs..."
 New-GPO -Name "Security Remediations" -Comment "Security Remediations"
@@ -20,4 +21,5 @@ Write-Output "Linking 3 GPOs..."
 #Workstations GPO done manually based on environment
 New-GPLink -Name "Security Remediations - Servers" -Target "OU=Domain Controllers,$((Get-ADDomain).DistinguishedName)" -LinkEnabled Yes
 New-GPLink -Name "Security Remediations - Browser Cache" -Target "OU=Domain Controllers,$((Get-ADDomain).DistinguishedName)" -LinkEnabled Yes
+
 New-GPLink -Name "Security Remediations" -Target "$((Get-ADDomain).DistinguishedName)" -LinkEnabled Yes
