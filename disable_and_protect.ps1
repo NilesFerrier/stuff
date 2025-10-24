@@ -8,4 +8,6 @@ Add-ADGroupMember -Identity "Protected Users" -Members "abpadmin"
 Add-ADGroupMember -Identity "Protected Users" -Members "Administrator"
 Add-ADGroupMember -Identity "Protected Users" -Members "atoadmin"
 Add-ADGroupMember -Identity "Protected Users" -Members "acptech"
+
 Add-ADGroupMember -Identity "Protected Users" -Members "acpautomate"
+exit 0
