@@ -6,7 +6,7 @@
 Get-WmiObject Win32_Product | Where-Object {$_.Name -Like "Sonicwall Net*"}
 
 #Remove Sonicwall Extender
-Get-WmiObject Win32_Product | Where-Object {$_.Name -Like "ProgramName*"} | ForEach-Object { $_.Uninstall() }
+Get-WmiObject Win32_Product | Where-Object {$_.Name -Like "Sonicwall Net*"} | ForEach-Object { $_.Uninstall() }
 
 #Install Forticlient
 invoke-webrequest -uri "https://drive.google.com/uc?export=download&id=1EZ0oe9uiujrnv_e4K2-ITo_euHJmweqZ" -outfile c:\temp\forticlient.msi
